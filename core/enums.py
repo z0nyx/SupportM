@@ -1,0 +1,43 @@
+from enum import IntEnum
+
+import disnake
+
+
+class Color(IntEnum):
+    GRAY = 0x2F3136
+    GREEN = 0x00FF00
+    RED = 0xFF0000
+    BLUE = 0x0000FF
+
+
+class ClientInfo(IntEnum):
+    ZONYX = 397414803473170432
+    BOT_GUILD_ID = 1351302654822715492  # Development
+
+
+class ChannelsInfo(IntEnum):
+    VERIFY_LOGS_CHANNEL = 1353012525918195855
+    FEEDBACK_CHANNEL = 1353012525918195855
+    VERIFY_CATEGORY_ID = 1352376279822766203
+    WARNS_LOG_CHANNEL = 1353012525918195855
+
+
+class RolesInfo(IntEnum):
+    NEW_ROLE = 1352409847655567461
+    DENY_VERIFY_ROLE = 1357357658755170376
+
+    SUPPORT_ROLE = 1352395014847860836
+
+
+class ChiefRoles(IntEnum):
+    MARMOK = 1352385300864958504
+    ADMIN = 1352322947129413654
+    SQUAD = 1352385395794645112
+    ADMINISTRATOR = 1352385524446527609
+    DEVELOPER = 1353662475576414229
+    SECURITY = 1352385685918715934
+
+
+default_error = (disnake.Forbidden, disnake.HTTPException)
+
+full_errors = (disnake.Forbidden, disnake.HTTPException, disnake.NotFound, disnake.InvalidData, TypeError, ValueError)
